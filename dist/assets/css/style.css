@@ -1,0 +1,216 @@
+@font-face {
+  font-family: budo;
+  src: url(../fonts/budmo_jiggler.ttf),
+  url('../fonts/budmo_jigglish.ttf');
+}
+
+body {
+  background-color: #000000;
+}
+
+#slot-view {
+  position: relative;
+  width: 615px;
+  height: 309px;
+  margin: 20px auto 20px;
+  padding-right: 2px;
+  padding-left: 2px;
+  border-radius: 8px;
+  background: url(../images/OS78CU0.png) no-repeat 0 -103px;
+  background-size: 800px;
+  overflow: hidden;
+}
+
+#result {
+  height: 115px;
+  margin: 0;
+  font-size: 100px;
+  font-family: budo, 'sans-serif';
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #fff;
+  text-align: center;
+  color: #73ba3b;
+}
+
+#result-subtitle {
+  height: 40px;
+  margin: 50px 0 0 0;
+  font-family: budo, 'sans-serif';
+  font-size: 40px;
+  text-shadow: 2px 2px #fff;
+  text-align: center;
+  color: #73ba3b;
+}
+
+#rotate {
+  display: none;
+}
+
+.wheel1 {
+  margin-left: 50px !important;
+}
+
+.wheel1, .wheel2, .wheel3 {
+  position: relative;
+  float: left;
+  width: 170px;
+  height: 203px;
+  margin: 51px 1px 0 2px;
+  border-radius: 7px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.spinner {
+  position: absolute;
+  height: 1560px;
+  width: 170px;
+  top: -90px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.spinner img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.play {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 26px;
+  text-align: center;
+  color: #555;
+  outline: 0;
+  cursor: pointer;
+}
+
+.play img {
+  height: 80px;
+  vertical-align: middle;
+}
+
+.play img.spin {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spin {
+  -moz-animation:   spin  1s linear;
+  -o-animation:     spin  1s linear;
+  -webkit-animation:spin  1s linear;
+  animation:        spin  1s linear;
+}
+.spin2 {
+  -moz-animation:   spin2  1s linear;
+  -o-animation:     spin2  1s linear;
+  -webkit-animation:spin2  1s linear;
+  animation:        spin2  1s linear;
+}
+.wheel2 .spin, .wheel2 .spin2 {
+  -moz-animation-delay:   0.5s;
+  -o-animation-delay:     0.5s;
+  -webkit-animation-delay:0.5s;
+  animation-delay:        0.5s;
+}
+.wheel3 .spin, .wheel3 .spin2 {
+  -moz-animation-delay:   1s;
+  -o-animation-delay:     1s;
+  -webkit-animation-delay:1s;
+  animation-delay:        1s;
+}
+
+@-moz-keyframes spin {
+  0%  {top: -90px;}
+  100%{top: 1560px;}
+}
+@-ms-keyframes spin {
+  0%  {top: -90px;}
+  100%{top: 1560px;}
+}
+@-o-keyframes spin {
+  0%  {top: -90px;}
+  100%{top: 1560px;}
+}
+@-webkit-keyframes spin {
+  0%  {top: -90px;}
+  100%{top: 1560px;}
+}
+@keyframes spin {
+  0%  {top: -90px;}
+  100%{top: 1560px;}
+}
+
+@-moz-keyframes spin2 {
+  0%  {top: -1560px;}
+  100%{top: 0px;}
+}
+@-ms-keyframes spin2 {
+  0%  {top: -1560px;}
+  100%{top: -90px;}
+}
+@-o-keyframes spin2 {
+  0%  {top: -1560px;}
+  100%{top: -90px;}
+}
+@-webkit-keyframes spin2 {
+  0%  {top: -1560px;}
+  100%{top: -90px;}
+}
+@keyframes spin2 {
+  0%  {top: -1560px;}
+  100%{top: -90px;}
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@media all and (orientation:portrait) {
+  #result-subtitle,
+  #result,
+  #slot-view,
+  #start {
+    display: none;
+  }
+
+  #rotate {
+    display: block;
+    width: 500px;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+  }
+
+  #rotate-text {
+    display: block;
+    font-size: 40px;
+    color: #fff;
+    font-family: 'helfvetica', 'arial', 'sans-serif';
+    text-align: center;
+    margin-top: 100%;
+  }
+}
+
+@media all and (orientation:landscape) {
+  #result-subtitle,
+  #result,
+  #slot-view,
+  #start {
+    display: block;
+  }
+
+  #rotate,
+  #rotate-text {
+    display: none;
+  }
+}
