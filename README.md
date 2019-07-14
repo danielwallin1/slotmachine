@@ -29,4 +29,4 @@ __Test:__<br/>
   The application can be tested here:<br/>
   https://game-slotmachine.herokuapp.com
 
-  ![slotmaching](./dist/assets/images/slotmachine.png)
+  ![slotmachine](./dist/assets/images/slotmachine.png)
